@@ -41,26 +41,3 @@ class LessonPlanCrew:
         result = crew.kickoff()
 
         return result
-
-# if __name__ == "__main__":
-
-#     print("## Welcome to Lesson Plan")
-#     print('----------------------------')
-
-#     subject = input(
-#         dedent("""
-#         What is subject Name ? """)
-#     )
-
-#     grade = input(
-#         dedent("""
-#         What is grade ? """)
-#     )
-
-#     lesson_plan_crew = LessonPlanCrew(subject=subject, grade=grade)
-#     result = lesson_plan_crew.run()
-
-#     print("\n\n########################")
-#     print(f"## Here is the Lesson for {subject} and {grade} ")
-#     print("########################\n")
-#     print(result)
