@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-os.environ["GOOGLE_API_KEY"] = 'AIzaSyAlm8Ka3K-WdlR0cI4aCB0-BUB0nre2OZ4'
+os.environ["GOOGLE_API_KEY"] = os.environ("GOOGLE_API_KEY")
 llm = ChatGoogleGenerativeAI(model="gemini-pro")
 
 class LessonPlanAgents:
