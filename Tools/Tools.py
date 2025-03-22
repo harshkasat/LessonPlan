@@ -6,6 +6,8 @@ from langchain.prompts import PromptTemplate
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.agents import Tool
+from dotenv import load_dotenv
+load_dotenv()
 
 python_repl = PythonREPL()
 prompt = hub.pull("hwchase17/react")
@@ -51,8 +53,8 @@ wikipedia_tool = Tool(
 )
 tools.append(wikipedia_tool)
 
-os.environ["GOOGLE_API_KEY"] = os.environ("GOOGLE_API_KEY")
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
+
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", , google_api_key = os.getenv('GOOGLE_API_KEY'))
 agent = create_react_agent(
     tools=tools,
     llm=llm,
