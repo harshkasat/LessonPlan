@@ -80,7 +80,6 @@ class LessonPlanAgents:
             verbose = True,
             tools = [
                 WikiSearch.search_wikipedia,
-                DuckGo.search_internet
             ],
             llm=llm,
         )
