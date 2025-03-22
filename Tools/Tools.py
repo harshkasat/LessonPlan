@@ -8,7 +8,6 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.agents import Tool
 
 python_repl = PythonREPL()
-os.environ["GOOGLE_API_KEY"] = os.environ.get('GOOGLE_API_KEY')
 prompt = hub.pull("hwchase17/react")
 wikipedia = WikipediaAPIWrapper()
 
@@ -52,7 +51,8 @@ wikipedia_tool = Tool(
 )
 tools.append(wikipedia_tool)
 
-llm = ChatGoogleGenerativeAI(model="gemini-")
+os.environ["GOOGLE_API_KEY"] = os.environ("GOOGLE_API_KEY")
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 agent = create_react_agent(
     tools=tools,
     llm=llm,
