@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 os.environ["GOOGLE_API_KEY"] = os.environ("GOOGLE_API_KEY")
-llm = ChatGoogleGenerativeAI(model="gemini-pro")
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
 
 class WikiSearch:

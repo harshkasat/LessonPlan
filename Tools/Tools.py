@@ -52,7 +52,7 @@ wikipedia_tool = Tool(
 )
 tools.append(wikipedia_tool)
 
-llm = ChatGoogleGenerativeAI(model="gemini-pro")
+llm = ChatGoogleGenerativeAI(model="gemini-")
 agent = create_react_agent(
     tools=tools,
     llm=llm,
