@@ -54,7 +54,7 @@ wikipedia_tool = Tool(
 tools.append(wikipedia_tool)
 
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", , google_api_key = os.getenv('GOOGLE_API_KEY'))
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key = os.getenv('GOOGLE_API_KEY'))
 agent = create_react_agent(
     tools=tools,
     llm=llm,
